@@ -16,9 +16,12 @@ function getQuote() {
     const text = quote.text;
     const author = quote.author;
     // alert("quote "+ text + ", " + author)
-    console.log(text, author)
+    //document.querySelector('header1').appendChild(famousQ);
     const display = document.getElementById('header1')
+    
     console.log(display)
     display.innerHTML = (`"${text}" -${author}`)
 })
+
+
   
