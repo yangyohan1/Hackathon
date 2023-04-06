@@ -2,13 +2,13 @@ console.log('this is a popup!');
 
 function getQuote() {
     return fetch('https://type.fit/api/quotes').then(response => {
-      return response.json()
-    }).then(jsonResponse => {
-      if (!jsonResponse.length) {
-        return []
-      }
-      return jsonResponse[Math.floor(Math.random() * jsonResponse.length)]
-    })
+    return response.json()
+  }).then(jsonResponse => {
+    if (!jsonResponse.length) {
+      return []
+    }
+    return jsonResponse[Math.floor(Math.random() * jsonResponse.length)]
+  })
   }
   getQuote().then(quote => {
     const famousQ = document.createElement('div')
@@ -20,5 +20,5 @@ function getQuote() {
     const display = document.getElementById('header1')
     console.log(display)
     display.innerHTML = (`"${text}" -${author}`)
-  })
+})
   
